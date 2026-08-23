@@ -1,12 +1,82 @@
 <footer class="site-footer">
     <div class="site-container footer-grid">
+
         <div class="footer-brand">
-            <a class="brand" href="{{ route('home') }}"><img src="{{ asset('assets/images/rawasi-logo.png') }}" alt="رواسي"></a>
-            <p>من قلب الركام، نبني الأمل مجدداً بحلول بناء محلية ومستدامة تدعم إعادة إعمار غزة.</p>
+            <a class="brand" href="{{ route('home') }}">
+                <img
+                    src="{{ asset('assets/images/rawasi-logo.png') }}"
+                    alt="{{ __('marketing.site_name') }}"
+                >
+            </a>
+
+            <p>
+                {{ __('marketing.footer.description') }}
+            </p>
         </div>
-        <div><h3>روابط سريعة</h3><a href="{{ route('home') }}">الرئيسية</a><a href="{{ route('about') }}">عن رواسي</a><a href="{{ route('products') }}">المنتج</a><a href="{{ route('support') }}">الدعم والشراكات</a></div>
-        <div><h3>تواصل معنا</h3><a href="tel:+970595676789" dir="ltr">+970 59 567 6789</a><a href="mailto:rawasi.gaza@gmail.com">rawasi.gaza@gmail.com</a><span>غزة، فلسطين</span></div>
-        <div><h3>كن جزءاً من الأثر</h3><p>الشراكة والدعم يقرّباننا من إنتاج مواد بناء محلية موثوقة.</p><a class="button primary small" href="{{ route('contact') }}">ابدأ معنا</a></div>
+
+        <div>
+            <h3>{{ __('marketing.footer.quick_links') }}</h3>
+
+            <a href="{{ route('home') }}">
+                {{ __('marketing.footer.home') }}
+            </a>
+
+            <a href="{{ route('about') }}">
+                {{ __('marketing.footer.about') }}
+            </a>
+
+            <a href="{{ route('products') }}">
+                {{ __('marketing.footer.products') }}
+            </a>
+
+            <a href="{{ route('support') }}">
+                {{ __('marketing.footer.support') }}
+            </a>
+        </div>
+
+        <div>
+            <h3>{{ __('marketing.footer.contact') }}</h3>
+
+            <a href="tel:+970595676789" dir="ltr">
+                +970 59 567 6789
+            </a>
+
+            <a href="mailto:rawasi.gaza@gmail.com">
+                rawasi.gaza@gmail.com
+            </a>
+
+            <span>
+                {{ __('marketing.footer.location') }}
+            </span>
+        </div>
+
+        <div>
+            <h3>{{ __('marketing.footer.impact_title') }}</h3>
+
+            <p>
+                {{ __('marketing.footer.impact_description') }}
+            </p>
+
+            <a
+                class="button primary small"
+                href="{{ route('contact') }}"
+            >
+                {{ __('marketing.footer.get_started') }}
+            </a>
+        </div>
+
     </div>
-    <div class="copyright"><div class="site-container"><span>© {{ date('Y') }} رواسي. جميع الحقوق محفوظة.</span><span>حلول محلية لمستقبل أكثر استدامة</span></div></div>
+
+    <div class="copyright">
+        <div class="site-container">
+            <span>
+                © {{ date('Y') }} {{ __('marketing.site_name') }}.
+                {{ __('marketing.footer.rights') }}
+            </span>
+
+            <span>
+                {{ __('marketing.footer.tagline') }}
+            </span>
+        </div>
+    </div>
 </footer>

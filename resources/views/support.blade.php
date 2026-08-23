@@ -1,6 +1,64 @@
 @extends('layouts.marketing')
-@section('title', 'ادعم رواسي')
+
+@section('title', __('support.page_title'))
+
 @section('content')
-<section class="page-hero support-hero"><div class="site-container narrow"><span class="eyebrow light">شارك في إعادة الإعمار</span><h1>دعمك يحوّل الفكرة<br>إلى أثر ملموس</h1><p>ساهم في تمويل الفحوصات، تطوير المنتج، وتجهيز خط إنتاج محلي.</p></div></section>
-<section class="section"><div class="site-container support-grid">@foreach([['دعم فني','قدّم خبرتك في هندسة المواد، الفحوصات أو ضبط الجودة.'],['شراكة مؤسسية','ساعدنا في التجارب الميدانية، التوريد أو الوصول إلى السوق.'],['تمويل التطوير','ساهم في نقل المنتج من النماذج الأولية إلى الإنتاج.']] as $s)<article><span>✦</span><h2>{{ $s[0] }}</h2><p>{{ $s[1] }}</p><a class="text-link" href="{{ route('contact') }}">ابدأ معنا ←</a></article>@endforeach</div></section>
+
+{{-- Hero --}}
+<section class="page-hero support-hero">
+    <div class="site-container narrow">
+
+        <span class="eyebrow light">
+            {{ __('support.hero.eyebrow') }}
+        </span>
+
+        <h1>
+            {{ __('support.hero.title_line_1') }}<br>
+            {{ __('support.hero.title_line_2') }}
+        </h1>
+
+        <p>
+            {{ __('support.hero.description') }}
+        </p>
+
+    </div>
+</section>
+
+
+{{-- Support Options --}}
+<section class="section">
+
+    <div class="site-container support-grid">
+
+        @foreach (['technical', 'partnership', 'funding'] as $type)
+
+            <article>
+
+                <span aria-hidden="true">
+                    {{ __('support.options.' . $type . '.icon') }}
+                </span>
+
+                <h2>
+                    {{ __('support.options.' . $type . '.title') }}
+                </h2>
+
+                <p>
+                    {{ __('support.options.' . $type . '.description') }}
+                </p>
+
+                <a
+                    class="text-link"
+                    href="{{ route('contact') }}"
+                >
+                    {{ __('support.options.' . $type . '.link') }}
+                </a>
+
+            </article>
+
+        @endforeach
+
+    </div>
+
+</section>
+
 @endsection

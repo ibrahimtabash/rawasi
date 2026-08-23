@@ -2,6 +2,9 @@
 
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
+use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
+Route::group(['prefix' => LaravelLocalization::setLocale()], function()
+{
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/about', [HomeController::class, 'about'])->name('about');
@@ -13,5 +16,7 @@ Route::view('/support', 'support')->name('support');
 Route::middleware(['auth', 'verified'])->group(function () {
     Route::view('dashboard', 'dashboard')->name('dashboard');
 });
+});
+
 // test
 require __DIR__.'/settings.php';

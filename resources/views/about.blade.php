@@ -1,8 +1,153 @@
 @extends('layouts.marketing')
-@section('title', 'عن رواسي')
+
+@section('title', __('about.page_title'))
+
 @section('content')
-<section class="page-hero about-hero"><div class="site-container narrow"><span class="eyebrow light">قصتنا</span><h1>من تحدٍ كبير،<br>ولدت فكرة محلية</h1><p>رواسي مبادرة من غزة ترى في ركام المباني مورداً يمكن استعادته، لا نهاية الطريق.</p></div></section>
-<section class="section"><div class="site-container split story"><div><span class="eyebrow">من نحن</span><h2>نحو إعادة إعمار أذكى</h2><p>بدأت رواسي من سؤال بسيط: كيف يمكن تحويل كميات الركام الهائلة إلى مادة نافعة وآمنة؟ جمعنا المعرفة الهندسية بالاحتياج المحلي لتطوير خلطة جافة قابلة للتوسع.</p><p>هدفنا ليس تقديم مادة بناء فحسب، بل بناء سلسلة قيمة محلية تقلل الاعتماد على الاستيراد وتخلق فرصاً جديدة.</p></div><div class="quote-card"><span>”</span><blockquote>نؤمن أن الاستدامة في غزة ليست خياراً إضافياً؛ بل جزء أساسي من القدرة على التعافي.</blockquote><small>فريق رواسي</small></div></div></section>
-<section class="section dark-section"><div class="site-container"><div class="section-heading"><span class="eyebrow light">قيمنا</span><h2>ما الذي يقودنا؟</h2></div><div class="values">@foreach([['♻','الاستدامة','تعظيم الاستفادة من الركام وتقليل الهدر.'],['⌁','المحلية','حلول تنطلق من واقع السوق وموارده.'],['✓','الجودة','اختبار وتحسين مستمران قبل الاعتماد.'],['✦','الكرامة','إعمار يضع الإنسان والمجتمع أولاً.']] as $v)<article><span>{{ $v[0] }}</span><h3>{{ $v[1] }}</h3><p>{{ $v[2] }}</p></article>@endforeach</div></div></section>
-<section class="section"><div class="site-container"><div class="section-heading"><span class="eyebrow green">رحلتنا</span><h2>خطوات ثابتة نحو السوق</h2></div><div class="timeline">@foreach([['2024','البحث','دراسة الركام المتاح واحتياجات السوق.'],['2025','النماذج الأولية','اختبار الخلطات وتحسين الأداء.'],['2026','التحقق الميداني','تجارب تطبيقية وشراكات فنية.'],['التالي','التوسع','إطلاق إنتاج محلي مستدام.']] as $t)<article><b>{{ $t[0] }}</b><h3>{{ $t[1] }}</h3><p>{{ $t[2] }}</p></article>@endforeach</div></div></section>
+
+    {{-- Hero --}}
+    <section class="page-hero about-hero">
+        <div class="site-container narrow">
+
+            <span class="eyebrow light">
+                {{ __('about.hero.eyebrow') }}
+            </span>
+
+            <h1>
+                {{ __('about.hero.title_line_1') }}<br>
+                {{ __('about.hero.title_line_2') }}
+            </h1>
+
+            <p>
+                {{ __('about.hero.description') }}
+            </p>
+
+        </div>
+    </section>
+
+
+    {{-- Our Story --}}
+    <section class="section">
+        <div class="site-container split story">
+
+            <div>
+
+                <span class="eyebrow">
+                    {{ __('about.story.eyebrow') }}
+                </span>
+
+                <h2>
+                    {{ __('about.story.title') }}
+                </h2>
+
+                <p>
+                    {{ __('about.story.paragraph_1') }}
+                </p>
+
+                <p>
+                    {{ __('about.story.paragraph_2') }}
+                </p>
+
+            </div>
+
+            <div class="quote-card">
+
+                <span aria-hidden="true">”</span>
+
+                <blockquote>
+                    {{ __('about.story.quote') }}
+                </blockquote>
+
+                <small>
+                    {{ __('about.story.quote_author') }}
+                </small>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    {{-- Values --}}
+    <section class="section dark-section">
+        <div class="site-container">
+
+            <div class="section-heading">
+
+                <span class="eyebrow light">
+                    {{ __('about.values.eyebrow') }}
+                </span>
+
+                <h2>
+                    {{ __('about.values.title') }}
+                </h2>
+
+            </div>
+
+            <div class="values">
+
+                @foreach (['sustainability', 'local', 'quality', 'dignity'] as $value)
+                    <article>
+
+                        <span aria-hidden="true">
+                            {{ __('about.values.' . $value . '.icon') }}
+                        </span>
+
+                        <h3>
+                            {{ __('about.values.' . $value . '.title') }}
+                        </h3>
+
+                        <p>
+                            {{ __('about.values.' . $value . '.description') }}
+                        </p>
+
+                    </article>
+                @endforeach
+
+            </div>
+
+        </div>
+    </section>
+
+
+    {{-- Journey --}}
+    <section class="section">
+        <div class="site-container">
+
+            <div class="section-heading">
+
+                <span class="eyebrow green">
+                    {{ __('about.journey.eyebrow') }}
+                </span>
+
+                <h2>
+                    {{ __('about.journey.title') }}
+                </h2>
+
+            </div>
+
+            <div class="timeline">
+
+                @foreach (['research', 'prototype', 'field', 'expansion'] as $step)
+                    <article>
+
+                        <b>
+                            {{ __('about.journey.' . $step . '.year') }}
+                        </b>
+
+                        <h3>
+                            {{ __('about.journey.' . $step . '.title') }}
+                        </h3>
+
+                        <p>
+                            {{ __('about.journey.' . $step . '.description') }}
+                        </p>
+
+                    </article>
+                @endforeach
+
+            </div>
+
+        </div>
+    </section>
+
 @endsection
