@@ -86,4 +86,52 @@ return [
 
     ],
 
+    'team_members' => [
+        'intro_title' => 'Rawasi Team',
+        'title' => 'A Team That Combines Expertise and Ambition',
+        'member_alt' => 'Rawasi team member: :name',
+        'members' => [
+            [
+                'name' => 'Arwa Husein',
+                'role' => 'Building Systems Development',
+                'description' => 'A computer engineer who helps organize the digital-services infrastructure.',
+                'image' => 'arwa.jpeg',
+            ],
+            [
+                'name' => 'Sara Al-Saqqa',
+                'role' => 'Research, Testing & Product Development',
+                'description' => 'An architect who follows mix development and connects it to construction needs.',
+                'image' => 'srara.png',
+            ],
+            [
+                'name' => 'Alaa Abu Mour',
+                'role' => 'Digital Management & User Experience',
+                'description' => 'Works on designing and managing the digital interface and improving user experience.',
+                'image' => 'alaa.png',
+            ],
+            [
+                'name' => 'Yousef Baroud',
+                'role' => 'Data Analysis & Intelligence',
+                'description' => 'A mechanical engineer who contributes to improving mix performance and simulating technical aspects.',
+                'image' => 'yousef.jpeg',
+            ],
+            [
+                'name' => 'Ibrahim Al-Tabash',
+                'role' => 'Software & Digital Infrastructure Development',
+                'description' => 'Develops the project website and its artificial-intelligence platform.',
+                'image' => 'ibrahim.jpeg',
+            ],
+        ],
+    ],
+ 
+'team' => [
+    'eyebrow' => 'The Rawasi Team',
+    'title' => 'We Believe Innovation Grows From Reality',
+    'paragraph_1' => 'Behind Rawasi is a young team that believes difficult circumstances do not eliminate the ability to innovate; they reveal it.',
+    'paragraph_2' => 'What brings us together is the belief that recovery does not begin only by waiting for resources, but also by rethinking what is already available.',
+    'paragraph_3' => 'We combine research, experimentation, documentation, and product development to transform an idea rooted in the reality of Gaza into a solution that can be tested and applied.',
+],
+
+
+
 ];

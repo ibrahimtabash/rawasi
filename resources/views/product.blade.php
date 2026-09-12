@@ -5,7 +5,8 @@
 @section('content')
 
 {{-- Hero --}}
-<section class="page-hero products-hero">
+<section class="page-hero products-hero"
+    style="--products-hero-image: url('{{ asset('assets/images/product/product_bg.jpeg') }}');">
     <div class="site-container">
 
         <span class="eyebrow">
@@ -22,26 +23,6 @@
 
     </div>
 
-    <div class="bag-family">
-
-        @foreach ([50, 25, 10, 5] as $size)
-
-            <div class="bag bag-{{ $size }}">
-
-                <img
-                    src="{{ asset('assets/images/rawasi-logo.png') }}"
-                    alt="{{ __('products.bag_alt') }}"
-                >
-
-                <b>
-                    {{ $size }} {{ __('products.kg') }}
-                </b>
-
-            </div>
-
-        @endforeach
-
-    </div>
 </section>
 
 
@@ -66,6 +47,16 @@
 
     </div>
 
+</section>
+
+
+{{-- Cement Product Visual --}}
+<section class="product-cement-section">
+    <div
+        class="site-container product-cement-visual"
+        aria-hidden="true"
+        style="--product-cement-image: url('{{ asset('assets/images/product/product_cem.png') }}');"
+    ></div>
 </section>
 
 

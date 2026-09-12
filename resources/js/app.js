@@ -22,4 +22,36 @@ document.addEventListener('DOMContentLoaded', () => {
     area?.addEventListener('input', calculate);
     depth?.addEventListener('input', calculate);
     calculate();
+
+    const statistics = document.querySelectorAll('.stat-number[data-target]');
+    const animateStatistic = (element) => {
+        const target = Number(element.dataset.target);
+        const suffix = element.dataset.suffix ?? '';
+        const duration = 1400;
+        const startTime = performance.now();
+
+        const update = (now) => {
+            const progress = Math.min((now - startTime) / duration, 1);
+            const easedProgress = 1 - Math.pow(1 - progress, 3);
+            element.textContent = `${Math.round(target * easedProgress)}${suffix}`;
+
+            if (progress < 1) requestAnimationFrame(update);
+        };
+
+        requestAnimationFrame(update);
+    };
+
+    if ('IntersectionObserver' in window) {
+        const statisticsObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach((entry) => {
+                if (!entry.isIntersecting) return;
+                animateStatistic(entry.target);
+                observer.unobserve(entry.target);
+            });
+        }, { threshold: 0.35 });
+
+        statistics.forEach((statistic) => statisticsObserver.observe(statistic));
+    } else {
+        statistics.forEach(animateStatistic);
+    }
 });

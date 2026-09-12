@@ -43,17 +43,17 @@ return [
     'use_tents_status' => 'Secure anchoring',
 
 
-    'development_eyebrow' => 'Products Under Development',
+    'development_eyebrow' => 'Product Under Development',
     'development_title' => 'Innovating for the Local Market',
-    'development_description' => 'We continue researching and developing solutions that meet reconstruction needs and maximize the use of available resources.',
+    'development_description' => 'As part of Rawasi’s commitment to developing more sustainable building solutions, we are expanding our product range to meet local market needs and support reconstruction projects with innovative, high-quality materials.',
 
     'under_development' => 'Under development',
 
     'sulfate_cement_title' => 'Sulphate-Resistant Cement',
-    'sulfate_cement_description' => 'A solution for applications exposed to salts and harsh conditions, currently under testing and validation.',
+    'sulfate_cement_description' => 'Being developed for use in soil or water environments rich in sulphates, with a focus on improving structural durability and extending service life.',
 
-    'white_cement_title' => 'White Cement',
-    'white_cement_description' => 'A sustainable product for finishes and facades, offering local quality at a carefully considered cost.',
+    'white_cement_title' => 'Ultra-Fine White Cement',
+    'white_cement_description' => 'Being developed to meet the needs of architectural finishes and decorative work, with a focus on high quality and ease of application.',
     'impact_title' => 'Building Today for a More Sustainable Future',
     'impact_description' => 'Every Rawasi bag means less rubble, a recovered local resource, and one step closer to reconstruction.',
     'impact_button' => 'Our Story & Impact',

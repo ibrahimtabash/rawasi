@@ -1,7 +1,6 @@
 <header class="site-header">
     <div class="site-container nav-wrap">
 
-```
     {{-- Logo --}}
     <a
         class="brand"
@@ -106,6 +105,5 @@
     </div>
 
 </div>
-```
 
 </header>

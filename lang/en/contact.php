@@ -5,10 +5,15 @@ return [
     'page_title' => 'Contact Rawasi',
 
     'hero' => [
+        'new_description' => 'At Rawasi, we build practical partnerships that help develop products, test mixes, document results, and expand the project’s impact in reconstruction.',
         'eyebrow' => 'We Are Here to Help',
         'title_line_1' => 'Let’s Build a Partnership',
         'title_line_2' => 'That Makes a Difference',
         'description' => 'For product requests, technical partnerships, or project support, we would be happy to hear from you.',
+    ],
+
+    'quote' => [
+        'text' => 'Every meaningful conversation can open a new step in Rawasi’s development, from an initial sample to a reliable service that supports reconstruction.',
     ],
 
     'info' => [

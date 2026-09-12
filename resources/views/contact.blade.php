@@ -5,7 +5,7 @@
 @section('content')
 
 {{-- Hero --}}
-<section class="page-hero contact-hero">
+<section class="page-hero contact-hero" style="background-image: url('{{ asset('assets/images/Contact/hero.png') }}');">
     <div class="site-container narrow">
 
         <span class="eyebrow light">
@@ -18,7 +18,7 @@
         </h1>
 
         <p>
-            {{ __('contact.hero.description') }}
+            {{ __('contact.hero.new_description') }}
         </p>
 
     </div>
@@ -228,6 +228,20 @@
 
         </form>
 
+    </div>
+
+</section>
+
+
+{{-- Contact Quote --}}
+<section class="contact-quote" style="background-image: url('{{ asset('assets/images/Contact/hero.png') }}');">
+
+    <div class="site-container narrow contact-quote-content">
+        <span class="contact-quote-mark" aria-hidden="true">“</span>
+
+        <blockquote>
+            {{ __('contact.quote.text') }}
+        </blockquote>
     </div>
 
 </section>

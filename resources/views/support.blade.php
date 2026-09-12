@@ -5,7 +5,7 @@
 @section('content')
 
 {{-- Hero --}}
-<section class="page-hero support-hero">
+<section class="page-hero support-hero" style="background-image: url('{{ asset('assets/images/Support/hero.png') }}');">
     <div class="site-container narrow">
 
         <span class="eyebrow light">
@@ -22,6 +22,42 @@
         </p>
 
     </div>
+</section>
+
+
+{{-- Support Introduction --}}
+<section class="section support-introduction">
+
+    <div class="site-container support-introduction-grid">
+
+        <div class="support-introduction-content">
+            <span class="eyebrow">إدارة دعمكم</span>
+
+            <h2>ماذا تفعل أن تعمل من خلال دعمكم؟</h2>
+
+            <p>
+                من خلال الدعم، إدارة الجودة، إدارة التوريدات الصحية، تعزيز تحسين نسب الجرار،
+                تطوير المنتج، وإدارة التوريدات الصحية، نعمل على تحويل العينة إلى منتج أكثر جاهزية.
+            </p>
+
+            <p>كل توريد يدعمنا على:</p>
+
+            <ul class="support-introduction-list">
+                <li>إدارة الجودة داخل المجتمع</li>
+                <li>تطوير الجودة وتعزيز نسب الجرار</li>
+                <li>توريد من الفكرة إلى منتج جاهز</li>
+                <li>تنفيذ التوريدات الصحية</li>
+                <li>دعم الجودة والنتائج الفنية</li>
+                <li>بناء توريدات جرارة</li>
+            </ul>
+        </div>
+
+        <div class="support-introduction-image">
+            <img src="{{ asset('assets/images/Support/side.png') }}" alt="إدارة دعمكم">
+        </div>
+
+    </div>
+
 </section>
 
 

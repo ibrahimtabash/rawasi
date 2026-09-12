@@ -1,3 +1,4 @@
+
 @extends('layouts.marketing')
 
 @section('title', __('about.page_title'))
@@ -5,7 +6,9 @@
 @section('content')
 
     {{-- Hero --}}
-    <section class="page-hero about-hero">
+    <section class="page-hero about-hero"
+        style="background-image: url('/assets/images/About_Us/about_bg.png');">
+
         <div class="site-container narrow">
 
             <span class="eyebrow light">
@@ -25,46 +28,137 @@
     </section>
 
 
-    {{-- Our Story --}}
-    <section class="section">
-        <div class="site-container split story">
 
-            <div>
+{{-- Our Story --}}
+<section class="section story-section">
+    <div class="site-container story-layout">
 
-                <span class="eyebrow">
-                    {{ __('about.story.eyebrow') }}
-                </span>
+        {{-- About Us --}}
+        <div class="story-content">
 
-                <h2>
-                    {{ __('about.story.title') }}
-                </h2>
+            <span class="eyebrow">
+                {{ __('about.story.eyebrow') }}
+            </span>
 
-                <p>
-                    {{ __('about.story.paragraph_1') }}
-                </p>
+            <h2>
+                {{ __('about.story.title') }}
+            </h2>
 
-                <p>
-                    {{ __('about.story.paragraph_2') }}
-                </p>
+            <p>
+                {{ __('about.story.paragraph_1') }}
+            </p>
 
-            </div>
-
-            <div class="quote-card">
-
-                <span aria-hidden="true">”</span>
-
-                <blockquote>
-                    {{ __('about.story.quote') }}
-                </blockquote>
-
-                <small>
-                    {{ __('about.story.quote_author') }}
-                </small>
-
-            </div>
+            <p>
+                {{ __('about.story.paragraph_2') }}
+            </p>
 
         </div>
-    </section>
+
+
+        {{-- Story Image --}}
+        <div class="story-image">
+
+            <img
+                src="{{ asset('assets/images/About_Us/story.png') }}"
+                alt="{{ __('about.story.title') }}"
+            >
+
+        </div>
+
+
+        {{-- Quote --}}
+        <div class="quote-card">
+
+            <span aria-hidden="true">”</span>
+
+            <blockquote>
+                {{ __('about.story.quote') }}
+            </blockquote>
+
+            <small>
+                {{ __('about.story.quote_author') }}
+            </small>
+
+        </div>
+
+    </div>
+</section>
+
+
+{{-- Rawasi Team Members --}}
+@php
+    $teamMembers = __('about.team_members.members');
+@endphp
+
+<section class="section team-members-section">
+    <div class="site-container">
+        <div class="section-heading team-members-heading">
+            <h2>{{ __('about.team_members.title') }}</h2>
+        </div>
+
+        <div class="team-members-grid">
+            @foreach ($teamMembers as $member)
+                <article class="team-member-card">
+                    <div class="team-member-image">
+                        <img
+                            src="{{ asset('assets/images/About_Us/' . $member['image']) }}"
+                            alt="{{ __('about.team_members.member_alt', ['name' => $member['name']]) }}"
+                        >
+                    </div>
+
+                    <div class="team-member-content">
+                        <h3>{{ $member['name'] }}</h3>
+                        <strong>{{ $member['role'] }}</strong>
+                        <p>{{ $member['description'] }}</p>
+                    </div>
+                </article>
+            @endforeach
+        </div>
+    </div>
+</section>
+
+
+{{-- Our Team / Approach --}}
+<section class="section team-section">
+    <div class="site-container team-layout">
+
+        {{-- Text --}}
+        <div class="team-content">
+
+            <span class="eyebrow green">
+                {{ __('about.team.eyebrow') }}
+            </span>
+
+            <h2>
+                {{ __('about.team.title') }}
+            </h2>
+
+            <p>
+                {{ __('about.team.paragraph_1') }}
+            </p>
+
+            <p>
+                {{ __('about.team.paragraph_2') }}
+            </p>
+
+            <p>
+                {{ __('about.team.paragraph_3') }}
+            </p>
+
+        </div>
+
+        {{-- Image --}}
+        <div class="team-image">
+            <img
+                src="{{ asset('assets/images/About_Us/team.jpeg') }}"
+                alt="{{ __('about.team.title') }}"
+            >
+        </div>
+
+    </div>
+</section>
+
+
 
 
     {{-- Values --}}
@@ -86,6 +180,7 @@
             <div class="values">
 
                 @foreach (['sustainability', 'local', 'quality', 'dignity'] as $value)
+
                     <article>
 
                         <span aria-hidden="true">
@@ -101,6 +196,7 @@
                         </p>
 
                     </article>
+
                 @endforeach
 
             </div>
@@ -128,6 +224,7 @@
             <div class="timeline">
 
                 @foreach (['research', 'prototype', 'field', 'expansion'] as $step)
+
                     <article>
 
                         <b>
@@ -143,6 +240,7 @@
                         </p>
 
                     </article>
+
                 @endforeach
 
             </div>
@@ -151,3 +249,4 @@
     </section>
 
 @endsection
+```
