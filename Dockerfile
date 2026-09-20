@@ -23,7 +23,8 @@ RUN mkdir -p database storage/framework/cache storage/framework/sessions storage
     && touch database/database.sqlite \
     && chmod -R 775 storage bootstrap/cache database
 
-RUN php artisan config:clear \
+RUN php artisan migrate --force \
+    && php artisan config:clear \
     && php artisan route:clear \
     && php artisan view:clear
 
