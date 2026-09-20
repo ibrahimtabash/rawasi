@@ -1,17 +1,4 @@
-FROM node:22 AS frontend
-
-WORKDIR /var/www/html
-
-COPY package*.json ./
-
-RUN npm install
-
-COPY . .
-
-RUN npm run build
-
-
-FROM php:8.4-cli
+FROM php:8.4-cli AS php-dependencies
 
 WORKDIR /var/www/html
 
@@ -28,9 +15,43 @@ RUN apt-get update && apt-get install -y \
 
 COPY --from=composer:2 /usr/bin/composer /usr/bin/composer
 
-COPY . .
+COPY composer.json composer.lock ./
 
 RUN composer install --no-dev --optimize-autoloader
+
+
+FROM node:22 AS frontend
+
+WORKDIR /var/www/html
+
+COPY package*.json ./
+
+RUN npm install
+
+COPY . .
+
+COPY --from=php-dependencies /var/www/html/vendor ./vendor
+
+RUN npm run build
+
+
+FROM php:8.4-cli
+
+WORKDIR /var/www/html
+
+RUN apt-get update && apt-get install -y \
+    libsqlite3-dev \
+    libonig-dev \
+    libxml2-dev \
+    libzip-dev \
+    && docker-php-ext-install pdo_sqlite mbstring xml zip \
+    && rm -rf /var/lib/apt/lists/*
+
+COPY --from=composer:2 /usr/bin/composer /usr/bin/composer
+
+COPY . .
+
+COPY --from=php-dependencies /var/www/html/vendor ./vendor
 
 COPY --from=frontend /var/www/html/public/build ./public/build
 
