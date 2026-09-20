@@ -1,3 +1,16 @@
+FROM node:22-alpine AS frontend
+
+WORKDIR /var/www/html
+
+COPY package*.json ./
+
+RUN npm install
+
+COPY . .
+
+RUN npm run build
+
+
 FROM php:8.4-cli
 
 WORKDIR /var/www/html
@@ -18,6 +31,8 @@ COPY --from=composer:2 /usr/bin/composer /usr/bin/composer
 COPY . .
 
 RUN composer install --no-dev --optimize-autoloader
+
+COPY --from=frontend /var/www/html/public/build ./public/build
 
 RUN mkdir -p database storage/framework/cache storage/framework/sessions storage/framework/views \
     && touch database/database.sqlite \
