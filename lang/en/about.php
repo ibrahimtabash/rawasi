@@ -107,7 +107,7 @@ return [
                 'name' => 'Alaa Abu Mour',
                 'role' => 'Digital Management & User Experience',
                 'description' => 'Works on designing and managing the digital interface and improving user experience.',
-                'image' => 'alaa.png',
+                'image' => 'alaa.jpg',
             ],
             [
                 'name' => 'Yousef Baroud',
@@ -123,7 +123,7 @@ return [
             ],
         ],
     ],
- 
+
 'team' => [
     'eyebrow' => 'The Rawasi Team',
     'title' => 'We Believe Innovation Grows From Reality',
