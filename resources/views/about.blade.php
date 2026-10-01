@@ -109,7 +109,6 @@
                     <div class="team-member-content">
                         <h3>{{ $member['name'] }}</h3>
                         <strong>{{ $member['role'] }}</strong>
-                        <p>{{ $member['description'] }}</p>
                     </div>
                 </article>
             @endforeach

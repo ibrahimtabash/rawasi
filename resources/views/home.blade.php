@@ -3,10 +3,15 @@
 @section('content')
     <section class="hero">
 
-        <div class="hero-shade"></div><img src="{{ asset('assets/images/rawasi-hero.png') }}"
-            alt="{{ __('home.hero_image_alt') }}">
+        <div class="hero-slider" aria-label="{{ __('home.hero_image_alt') }}">
+            @foreach (['rawasi-hero.png', 'rawasi-hero1.png', 'rawasi-hero2.png', 'rawasi-hero3.png'] as $index => $image)
+                <img class="hero-slide{{ $index === 0 ? ' is-active' : '' }}"
+                    src="{{ asset('assets/images/' . $image) }}"
+                    alt="{{ __('home.hero_image_alt') }}" aria-hidden="{{ $index === 0 ? 'false' : 'true' }}">
+            @endforeach
+        </div>
+        <div class="hero-shade"></div>
         <div class="site-container hero-content">
-            <span class="eyebrow light">{{ __('home.hero_eyebrow') }}</span>
             <h1>{!! __('home.hero_title') !!}</h1>
             <p>{{ __('home.hero_description') }}</p>
             <div class="actions"><a class="button primary" href="{{ route('products') }}">

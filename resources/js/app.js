@@ -1,4 +1,16 @@
 document.addEventListener('DOMContentLoaded', () => {
+    const heroSlides = document.querySelectorAll('.hero-slide');
+    if (heroSlides.length > 1) {
+        let activeSlide = 0;
+        window.setInterval(() => {
+            heroSlides[activeSlide].classList.remove('is-active');
+            heroSlides[activeSlide].setAttribute('aria-hidden', 'true');
+            activeSlide = (activeSlide + 1) % heroSlides.length;
+            heroSlides[activeSlide].classList.add('is-active');
+            heroSlides[activeSlide].setAttribute('aria-hidden', 'false');
+        }, 5000);
+    }
+
     const toggle = document.querySelector('#menuToggle');
     const nav = document.querySelector('#mainNav');
     toggle?.addEventListener('click', () => {
