@@ -35,14 +35,14 @@
                 <span class="stat-icon" aria-hidden="true">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M7.2 7.2 4.4 4.4M5.4 10.6 2.6 7.8M16.8 16.8l2.8 2.8m-1-6.2 2.8 2.8M12 3.4a8.6 8.6 0 1 1-8.1 11.4"/><path d="m8.4 4.2 3.9-.8-1.1 3.8M15.6 19.8l-3.9.8 1.1-3.8"/></svg>
                 </span>
-                <b class="stat-number" data-target="39" data-suffix="M">0M</b>
+                <b class="stat-number" data-target="61" data-suffix="M">0M</b>
                 <span>{{ __('home.stat_rubble') }}</span>
             </article>
             <article>
                 <span class="stat-icon" aria-hidden="true">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="8.5"/><path d="M14.6 8.8c-.6-.6-1.5-.9-2.5-.9-1.5 0-2.6.8-2.6 2 0 2.9 5.1 1.5 5.1 4.3 0 1.2-1.1 2-2.7 2-1.1 0-2.1-.4-2.8-1.1M12 6.5v11"/></svg>
                 </span>
-                <b class="stat-number" data-target="50" data-suffix="%">0%</b>
+                <b class="stat-number" data-target="66" data-suffix="%">0%</b>
                 <span>{{ __('home.stat_cost_reduction') }}</span>
             </article>
         </div>
