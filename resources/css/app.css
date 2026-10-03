@@ -246,9 +246,24 @@ select:focus[data-flux-control] {
     margin: 0;
     background: #fff;
     color: var(--rawasi-ink);
-    font-family: "Cairo", sans-serif;
+    font-family: "Poppins", sans-serif;
     line-height: 1.8;
     overflow-x: hidden;
+}
+
+html[dir="rtl"] .marketing-body {
+    font-family: "Hacen", "Cairo", sans-serif;
+}
+
+.marketing-body h1,
+.marketing-body h2,
+.marketing-body h3,
+.marketing-body h4,
+.marketing-body button,
+.marketing-body input,
+.marketing-body textarea,
+.marketing-body select {
+    font-family: inherit;
 }
 
 .marketing-body a {
