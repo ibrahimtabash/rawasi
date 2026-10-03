@@ -4,7 +4,7 @@
     <section class="hero">
 
         <div class="hero-slider" aria-label="{{ __('home.hero_image_alt') }}">
-            @foreach (['rawasi-hero1.jpeg', 'rawasi-hero2.png', 'rawasi-hero3.jpeg', 'rawasi-hero4.jpeg', 'rawasi-hero.png', 'rawasi-hero5.jpeg'] as $index => $image)
+            @foreach (['rawasi-hero.png', 'rawasi-hero1.jpeg', 'rawasi-hero2.png', 'rawasi-hero3.jpeg', 'rawasi-hero4.jpeg'] as $index => $image)
                 <img class="hero-slide{{ $index === 0 ? ' is-active' : '' }}"
                     src="{{ asset('assets/images/' . $image) }}"
                     alt="{{ __('home.hero_image_alt') }}" aria-hidden="{{ $index === 0 ? 'false' : 'true' }}">

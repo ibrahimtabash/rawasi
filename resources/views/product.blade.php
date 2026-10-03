@@ -55,7 +55,7 @@
     <div
         class="site-container product-cement-visual"
         aria-hidden="true"
-        style="--product-cement-image: url('{{ asset('assets/images/product/product_cem.png') }}');"
+        style="--product-cement-image: url('{{ asset('assets/images/product/rawasi.jpeg') }}');"
     ></div>
 </section>
 

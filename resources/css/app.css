@@ -1103,7 +1103,8 @@ select:focus[data-flux-control] {
 }
 
 .product-cement-visual {
-    min-height: clamp(260px, 34vw, 460px);
+    aspect-ratio: 3 / 2;
+    min-height: 0;
     background-color: #32332e;
     background-image:
         linear-gradient(90deg, rgba(26, 35, 27, .18), rgba(26, 35, 27, .04)),
@@ -1577,7 +1578,7 @@ select:focus[data-flux-control] {
 
 .site-header {
     height: 82px;
-    background: rgba(255, 255, 255, .93);
+    background: #2d302e;
     border-bottom: 1px solid rgba(52, 54, 52, .08);
     box-shadow: 0 5px 24px rgba(35, 31, 25, .04);
 }
@@ -1605,13 +1606,17 @@ select:focus[data-flux-control] {
 
 .site-header nav a {
     font-size: 14px;
-    color: #454745;
+    color: #fff;
     font-weight: 600;
 }
 
 .site-header nav a:after {
     height: 2px;
     bottom: 17px;
+}
+
+.site-header .language-switcher {
+    color: #fff;
 }
 
 .nav-actions {
@@ -1631,7 +1636,7 @@ select:focus[data-flux-control] {
     width: 21px;
     height: 2px;
     margin: 4px auto;
-    background: #343634;
+    background: #fff;
     transition: .2s;
 }
 
@@ -1656,14 +1661,14 @@ select:focus[data-flux-control] {
         top: 82px;
         right: 0;
         left: 0;
-        background: #fff;
+        background: #2d302e;
         height: auto;
         padding: 10px 24px 24px;
         display: none;
         flex-direction: column;
         gap: 0;
         box-shadow: 0 15px 25px #0001;
-        border-top: 1px solid #eee;
+        border-top: 1px solid rgba(255, 255, 255, .14);
     }
 
     .site-header nav.open {
@@ -1675,7 +1680,8 @@ select:focus[data-flux-control] {
         padding: 12px;
         height: auto;
         justify-items: start;
-        border-bottom: 1px solid #eee;
+        color: #fff;
+        border-bottom: 1px solid rgba(255, 255, 255, .14);
     }
 
     .site-header nav a:after {
@@ -1924,7 +1930,7 @@ select:focus[data-flux-control] {
     }
 
     .product-cement-visual {
-        min-height: 230px;
+        min-height: 0;
     }
 
     .bag-family {
