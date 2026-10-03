@@ -1135,16 +1135,12 @@ select:focus[data-flux-control] {
     border-color: rgba(90, 156, 66, .45);
 }
 
-.product-bag {
+.product-image {
+    display: block;
     height: 245px;
-    width: 130px;
+    width: 100%;
     margin: 0 auto 20px;
-    background: linear-gradient(100deg, #e0d1ba, #f6efe2, #cbb99d);
-    border-radius: 16px 16px 5px 5px;
-    padding: 45px 15px 15px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    object-fit: contain;
 }
 
 .product-card h3 {
@@ -1943,9 +1939,8 @@ select:focus[data-flux-control] {
         padding: 20px;
     }
 
-    .product-bag {
+    .product-image {
         height: 220px;
-        width: 120px;
     }
 
     .calculator {

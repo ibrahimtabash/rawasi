@@ -84,18 +84,11 @@
 
                 <article class="product-card">
 
-                    <div class="product-bag">
-
-                        <img
-                            src="{{ asset('assets/images/rawasi-logo.png') }}"
-                            alt="{{ __('products.bag_alt') }}"
-                        >
-
-                        <strong>
-                            {{ $size }} {{ __('products.kg') }}
-                        </strong>
-
-                    </div>
+                    <img
+                        class="product-image"
+                        src="{{ asset('assets/images/product/product_' . $size . 'k.' . ($size === '5' ? 'jpeg' : 'jpg')) }}"
+                        alt="{{ $size }} {{ __('products.kg') }}"
+                    >
 
                     <h3>
                         {{ __('products.items.' . $size . '.title') }}

@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
             activeSlide = (activeSlide + 1) % heroSlides.length;
             heroSlides[activeSlide].classList.add('is-active');
             heroSlides[activeSlide].setAttribute('aria-hidden', 'false');
-        }, 5000);
+        }, 2000);
     }
 
     const toggle = document.querySelector('#menuToggle');
