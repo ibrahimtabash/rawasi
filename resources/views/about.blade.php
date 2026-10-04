@@ -98,6 +98,9 @@
 
         <div class="team-members-grid">
             @foreach ($teamMembers as $member)
+                @if ($member['image'] === 'arwa.jpeg')
+                    @continue
+                @endif
                 <article class="team-member-card">
                     <div class="team-member-image">
                         <img

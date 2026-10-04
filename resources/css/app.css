@@ -2272,12 +2272,14 @@ html[dir="rtl"] .marketing-body {
 }
 
 .team-members-grid {
-    display: grid;
-    grid-template-columns: repeat(5, minmax(0, 1fr));
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 18px;
 }
 
 .team-member-card {
+    flex: 0 1 210px;
     overflow: hidden;
     background: #fff;
     border: 0;
