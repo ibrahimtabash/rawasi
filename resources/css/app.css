@@ -276,6 +276,28 @@ html[dir="rtl"] .marketing-body {
     display: block;
 }
 
+.donation-button { background: var(--rawasi-green); color: #fff; }
+.donation-button:hover { background: #4c8d36; }
+.donate-hero { background: linear-gradient(120deg, #2d302e, #465341); color: #fff; padding: 90px 0; }
+.donate-hero-grid, .donate-grid { display: grid; grid-template-columns: 1.1fr .9fr; gap: 70px; align-items: center; }
+.donate-hero h1 { max-width: 650px; margin: 14px 0; font-size: clamp(36px, 5vw, 64px); }
+.donate-hero p { max-width: 600px; color: #dce5db; font-size: 17px; }
+.donate-mark { justify-self: center; color: #8bc475; font-size: 180px; opacity: .8; }
+.donate-section { background: var(--rawasi-cream); }
+.donate-impact h2 { font-size: 38px; margin: 12px 0; }
+.donate-impact p { max-width: 470px; }
+.donate-form { background: #fff; padding: 32px; border-radius: 18px; box-shadow: 0 16px 45px rgba(52,54,52,.12); display: grid; gap: 18px; }
+.donate-form label, .donate-form legend { font-weight: 700; font-size: 14px; }
+.donate-form input[type=text], .donate-form input[type=email], .donate-form textarea { display:block; width:100%; margin-top:7px; border:1px solid var(--rawasi-line); border-radius:7px; padding:11px; font:inherit; }
+.donation-amounts { display:flex; flex-wrap:wrap; gap:8px; margin-top:10px; }
+.donation-amounts label { cursor:pointer; }
+.donation-amounts input { position:absolute; opacity:0; }
+.donation-amounts span { display:block; border:1px solid var(--rawasi-line); border-radius:7px; padding:9px 13px; }
+.donation-amounts input:checked + span { background:var(--rawasi-green); color:#fff; border-color:var(--rawasi-green); }
+.donation-submit { background:var(--rawasi-green); width:100%; }
+.donate-form small { color:#687067; line-height:1.6; }
+@media (max-width: 700px) { .donate-hero-grid, .donate-grid { grid-template-columns:1fr; gap:30px; } .donate-mark { font-size:100px; } .donate-hero { padding:60px 0; } }
+
 .site-container {
     width: min(1180px, calc(100% - 40px));
     margin-inline: auto;
@@ -440,9 +462,9 @@ html[dir="rtl"] .marketing-body {
     inset: 0;
     background: linear-gradient(
         90deg,
-        rgba(20, 22, 20, .83),
-        rgba(20, 22, 20, .4) 52%,
-        rgba(20, 22, 20, .1)
+        rgba(20, 22, 20, .58),
+        rgba(20, 22, 20, .24) 52%,
+        rgba(20, 22, 20, .04)
     );
 }
 

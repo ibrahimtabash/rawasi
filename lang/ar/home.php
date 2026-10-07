@@ -7,6 +7,7 @@ return [
     'hero_description' => 'نحوّل الخرسانة المهدّمة إلى خلطات جافة عالية الجودة، لدعم إعادة الإعمار بمواد محلية أقل كلفة وأكثر استدامة.',
     'hero_product_button' => 'اكتشف المنتج',
     'hero_contact_button' => 'تواصل معنا',
+    'hero_donate_button' => 'تبرع',
 
     'stat_local_materials' => 'اعتماد مستهدف على مواد محلية',
     'stat_rubble' => 'طن من الركام المتاح',

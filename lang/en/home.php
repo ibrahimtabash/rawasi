@@ -7,6 +7,7 @@ return [
     'hero_description' => 'We transform demolished concrete into high-quality dry mixes, supporting reconstruction with locally sourced materials that are more affordable and sustainable.',
     'hero_product_button' => 'Discover the product',
     'hero_contact_button' => 'Contact us',
+    'hero_donate_button' => 'Donate',
 
     'stat_local_materials' => 'Target reliance on local materials',
     'stat_rubble' => 'Tons of available rubble',

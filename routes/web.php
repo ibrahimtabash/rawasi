@@ -12,6 +12,7 @@ Route::get('/product', [HomeController::class, 'product'])->name('products');
 Route::get('/contact', [HomeController::class, 'contact'])->name('contact');
 Route::post('/contact', [HomeController::class, 'submitContact'])->middleware('throttle:5,1')->name('contact.submit');
 Route::view('/support', 'support')->name('support');
+Route::view('/donate', 'donate')->name('donate');
 
 Route::middleware(['auth', 'verified'])->group(function () {
     Route::view('dashboard', 'dashboard')->name('dashboard');

@@ -74,6 +74,10 @@
             {{ $switchLabel }}
         </a>
 
+        <a class="button donation-button small" href="{{ route('donate') }}">
+            {{ __('home.hero_donate_button') }}
+        </a>
+
 
         {{-- Contact Button --}}
         <a

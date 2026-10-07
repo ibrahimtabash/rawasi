@@ -98,9 +98,6 @@
 
         <div class="team-members-grid">
             @foreach ($teamMembers as $member)
-                @if ($member['image'] === 'arwa.jpeg')
-                    @continue
-                @endif
                 <article class="team-member-card">
                     <div class="team-member-image">
                         <img
@@ -112,6 +109,7 @@
                     <div class="team-member-content">
                         <h3>{{ $member['name'] }}</h3>
                         <strong>{{ $member['role'] }}</strong>
+                        <p>{{ $member['description'] }}</p>
                     </div>
                 </article>
             @endforeach
